@@ -29,5 +29,7 @@ describe('Frog', function() {
     expect(frog.y).to.equal(500.5);
   })
 
+  it('should move along x axis')
+
 
 })
