@@ -10,14 +10,13 @@ describe('Log', function() {
 
   it('should be appear on the canvas', function() {
     const log = new Log();
-
-    expect(log.y).to.equal(50);
+    expect(log.y).to.equal(150);
   })
 
   it('should move', function() {
     const log = new Log();
-    log.move()
+    log.moveLeft()
     ;
-    expect(log.x).to.equal(50.5)
+    expect(log.x).to.equal(349.5)
   })
 })

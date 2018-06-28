@@ -16,5 +16,6 @@ describe('GamePiece', function() {
       dxv: .5
     })
   })
+
 })
 
