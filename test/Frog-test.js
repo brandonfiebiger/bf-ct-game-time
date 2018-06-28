@@ -10,24 +10,21 @@ describe('Frog', function() {
   })
 
   it('should be appear on the canvas', function() {
-    const frog = new Frog();
+    const frog = new Frog(50);
 
     expect(frog.x).to.equal(50);
   })
 
   it('should move', function() {
-    const frog = new Frog();
+    const frog = new Frog(100);
+    frog.moveFrogLeft();
+    expect(frog.x).to.equal(50);
 
-    frog.moveFrog();
-
-    expect(frog.x).to.equal(50.5)
   })
 
-  it('should have a direction on y-axis', function() {
-    const frog = new Frog();
-    frog.moveFrog()
+  it('should move right', function() {
+    const frog = new Frog(100);
+    frog.moveFrogRight();
+    expect(frog.x).to.equal(150)
   })
-
-  it('should move along x axis')
-
 })
