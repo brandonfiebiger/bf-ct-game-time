@@ -12,10 +12,10 @@ describe('Car', function() {
     expect(car1).to.be.an('object');
     expect(car2).to.be.an('object');
   })
-  it('car should be able to move', function() {
+  it('car should be able to move right', function() {
     const car = new Car();
-    car.move()
-    expect(car.x).to.equal(50.5)
+    car.moveRight()
+    expect(car.x).to.equal(350.5)
   })
 
 })
