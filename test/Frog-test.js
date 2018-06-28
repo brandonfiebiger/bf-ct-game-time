@@ -15,7 +15,7 @@ describe('Frog', function() {
     expect(frog.x).to.equal(50);
   })
 
-  it.skip('should move', function() {
+  it('should move', function() {
     const frog = new Frog();
 
     frog.moveFrog();
@@ -23,11 +23,11 @@ describe('Frog', function() {
     expect(frog.x).to.equal(50.5)
   })
 
-  it.skip('should have a direction on y-axis', function() {
+  it('should have a direction on y-axis', function() {
     const frog = new Frog();
     frog.moveFrog()
   })
 
-  it.skip('should move along x axis')
+  it('should move along x axis')
 
 })
