@@ -6,16 +6,11 @@ describe('Car', function() {
     const car = new Car();
     expect(car).to.be.an('object')
   })
+
   it('should be able to create multiple instances of car', function() {
     const car1 = new Car();
     const car2 = new Car();
     expect(car1).to.be.an('object');
     expect(car2).to.be.an('object');
   })
-  it('car should be able to move right', function() {
-    const car = new Car();
-    car.moveRight()
-    expect(car.x).to.equal(350.5)
-  })
-
 })
