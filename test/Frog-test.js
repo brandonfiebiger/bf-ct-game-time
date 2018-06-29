@@ -5,18 +5,17 @@ describe('Frog', function() {
   it('should be an object', function() {
     const frog = new Frog();
     expect(frog).to.be.an('object')
-  })
+  });
 
   it('should appear on the canvas', function() {
     const frog = new Frog(50);
     expect(frog.x).to.equal(50);
-  })
+  });
 
   it('should move', function() {
     const frog = new Frog(100);
     frog.moveFrogLeft();
     expect(frog.x).to.equal(50);
-
   })
 
   it('should move right', function() {
