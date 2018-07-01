@@ -23,4 +23,6 @@ describe('Frog', function() {
     frog.moveFrogRight();
     expect(frog.x).to.equal(150)
   })
+
+  
 })
