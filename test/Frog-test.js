@@ -8,20 +8,34 @@ describe('Frog', function() {
   });
 
   it('should appear on the canvas', function() {
-    const frog = new Frog(50);
-    expect(frog.x).to.equal(50);
+    const frog = new Frog();
+    expect(frog.x).to.equal(350);
   });
 
-  it('should move', function() {
-    const frog = new Frog(100);
-    frog.moveFrogLeft();
-    expect(frog.x).to.equal(50);
+  it('should have functions to move up, down, left and right', function() {
+    const frog = new Frog();
+    expect(frog.moveFrogUp).to.be.a('function');
+    expect(frog.moveFrogDown).to.be.a('function');
+    expect(frog.moveFrogLeft).to.be.a('function');
+    expect(frog.moveFrogRight).to.be.a('function');
   })
 
+  it('should move left', function() {
+    const frog = new Frog();
+    frog.moveFrogLeft();
+    expect(frog.x).to.equal(340);
+  });
+
   it('should move right', function() {
-    const frog = new Frog(100);
+    const frog = new Frog();
     frog.moveFrogRight();
-    expect(frog.x).to.equal(150)
+    expect(frog.x).to.equal(360)
+  });
+
+  it('should move up', function() {
+    const frog = new Frog();
+    frog.moveFrogUp();
+    expect(frog.y).to.equal(605)
   })
 
   
