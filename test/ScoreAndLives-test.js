@@ -27,4 +27,16 @@ describe('ScoreAndLives', function() {
     expect(scoreAndLives.points).to.equal(10);
   })
 
+  it('should start the game over if the player loses three lives', function() {
+    const scoreAndLives = new ScoreAndLives();
+    const frog = new Frog();
+    frog.hopUp(scoreAndLives);
+    frog.frogDies(scoreAndLives);
+    frog.frogDies(scoreAndLives);
+    frog.frogDies(scoreAndLives);
+    scoreAndLives.gameOver(frog);
+    expect(scoreAndLives.lives).to.equal(3);
+    expect(scoreAndLives.points).to.equal(0);
+  })
+
 })

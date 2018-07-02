@@ -1,5 +1,6 @@
 const { expect } = require('chai');
 const Frog = require('../lib/Frog.js');
+const ScoreAndLives = require('../lib/Score.js');
 
 describe('Frog', function() {
   it('should be an object', function() {
@@ -12,13 +13,6 @@ describe('Frog', function() {
     expect(frog.x).to.equal(350);
   });
 
-  it('should be able to move up, down, left, and right', function() {
-    const frog = new Frog();
-    frog.hopUp();
-    frog.hopDown();
-    frog.hopLeft();
-    frog.hopRight();
-  })
 
   it('should hop left', function() {
     const frog = new Frog();
@@ -33,14 +27,20 @@ describe('Frog', function() {
   });
 
   it('should hop up', function() {
+    const scoreAndLives = new ScoreAndLives;
     const frog = new Frog();
-    frog.hopUp();
-    expect(frog.y).to.equal(601)
+    frog.hopUp(scoreAndLives);
+    expect(frog.y).to.equal(601);
   });
 
   it('should be able to die', function() {
     const frog = new Frog();
-    frog.Dies();
+    const scoreAndLives = new ScoreAndLives;
+    frog.frogDies(scoreAndLives);
+
+    expect(scoreAndLives.lives).to.equal(2);
+    expect(frog.x).to.equal(350);
+    expect(frog.y).to.equal(639);
   })
   
 })
