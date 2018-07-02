@@ -12,31 +12,35 @@ describe('Frog', function() {
     expect(frog.x).to.equal(350);
   });
 
-  it('should have functions to move up, down, left and right', function() {
+  it('should be able to move up, down, left, and right', function() {
     const frog = new Frog();
-    expect(frog.moveFrogUp).to.be.a('function');
-    expect(frog.moveFrogDown).to.be.a('function');
-    expect(frog.moveFrogLeft).to.be.a('function');
-    expect(frog.moveFrogRight).to.be.a('function');
+    frog.hopUp();
+    frog.hopDown();
+    frog.hopLeft();
+    frog.hopRight();
   })
 
-  it('should move left', function() {
+  it('should hop left', function() {
     const frog = new Frog();
-    frog.moveFrogLeft();
-    expect(frog.x).to.equal(340);
+    frog.hopLeft();
+    expect(frog.x).to.equal(312);
   });
 
-  it('should move right', function() {
+  it('should hop right', function() {
     const frog = new Frog();
-    frog.moveFrogRight();
-    expect(frog.x).to.equal(360)
+    frog.hopRight();
+    expect(frog.x).to.equal(388)
   });
 
-  it('should move up', function() {
+  it('should hop up', function() {
     const frog = new Frog();
-    frog.moveFrogUp();
-    expect(frog.y).to.equal(605)
+    frog.hopUp();
+    expect(frog.y).to.equal(601)
+  });
+
+  it('should be able to die', function() {
+    const frog = new Frog();
+    frog.Dies();
   })
-
   
 })
