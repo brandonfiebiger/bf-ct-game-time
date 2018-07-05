@@ -19,13 +19,13 @@ h1 {
 }
 
 .left-section {
-  margin-left: 5em;
+  margin-left: 3em;
   text-align: center;
   float: left
 }
 
 .right-section {
-  margin-right: 5em;
+  margin-right: 3em;
   text-align: center;
   float: right
 }
