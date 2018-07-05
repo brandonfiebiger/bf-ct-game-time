@@ -15,7 +15,6 @@ describe('Frog', function() {
     expect(frog.x).to.equal(37);
   });
 
-
   it('should hop left', function() {
     const frog = new Frog();
     frog.x = 57
@@ -42,7 +41,6 @@ describe('Frog', function() {
     const score = new Score;
     frog.hopUp();
     expect('score').to.equal(10)
-
   })
 
   it('should be able to die', function() {
@@ -55,4 +53,4 @@ describe('Frog', function() {
     frog.frogDies()
     expect(frog.x).to.equal(0)
   })
-})
+});
