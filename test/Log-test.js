@@ -3,7 +3,6 @@ const Log = require('../lib/Log.js');
 
 describe('Log', function() {
   it('should instansiate our loyal log', function() {
-
     const log = new Log();
     expect(log).to.be.a('object')
   })
