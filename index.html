@@ -7,28 +7,35 @@
   <link href="https://fonts.googleapis.com/css?family=Gaegu:400,700" rel="stylesheet">
 </head>
 <body>
-  <section class='left-section'>
-    <h1>Hi There</h1>
-    <br>
-    <h1>Instructions:</h1>
-    <h1>Use arrow keys to move</h1>
-    <h1>Dodge the cars</h1>
-    <h1>Ride the logs</h1>
-    <h1>Hide in the holes</h1>
-    <h1>Can you catch the fly?</h1>
-    <br>
-    <h1>Press R to restart</h1>
+  <article class='main'>
+    <section class='left-section'>
+      <h1>Hi There</h1>
+      <br>
+      <h1>Instructions:</h1>
+      <h1>Use arrow keys to move</h1>
+      <h1>Dodge the cars</h1>
+      <h1>Ride the logs</h1>
+      <h1>Hide in the holes</h1>
+      <h1>Can you catch the fly?</h1>
+      <br>
+      <h1>Press R to restart</h1>
+    </section>
+    <canvas id="game" width="600" height="715" background-color='rgb(0, 0, 0'>
+      <img id="frog" src="images/frog.png">
+      <img id="frogdown" src="images/frogdown.png">
+      <img id="frogleft" src="images/frogleft.png">
+      <img id="frogright" src="images/frogright.png">
+      <img id="purple-grass" src="images/PurpleGrass.png">
+      <img id="green-grass" src="images/GreenGrass.png">
+      <img id="car" src="images/car.png">
+      <img id="log" src="images/log.png">
 
-  </section>
-  <section class='right-section'>
-    <h1>Hi Score</h1>
-    <h1></h1>
-  </section>
-  <canvas id="game" width="600" height="715" background-color='rgb(0, 0, 0'>
-    <img id="frog" src="images/frog.png">
-    <img id="purple-grass" src="images/PurpleGrass.png">
-    <img id="green-grass" src="images/GreenGrass.png">
-  </canvas>
-  <script src="main.bundle.js"></script>
-</body>
+    </canvas>
+    <section class='right-section'>
+      <h1>Hi Score</h1>
+      <h1></h1>
+    </section>
+  </article>
+    <script src="main.bundle.js"></script>
+  </body>
 </html>

@@ -1,6 +1,6 @@
 #game {
   border: 1px dashed;
-  margin: auto;
+  margin: 0;
   display: block;
 }
 
@@ -18,17 +18,19 @@ h1 {
   text-align: center;
 }
 
+.main {
+  display: flex;
+  justify-content: space-evenly
+}
+
 .left-section {
-  margin-left: 3em;
   text-align: center;
-  float: left
 }
 
 .right-section {
-  margin-right: 3em;
   text-align: center;
-  float: right
 }
+
 
 
 
