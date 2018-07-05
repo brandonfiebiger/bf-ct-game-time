@@ -3,9 +3,13 @@ const GamePiece = require('../lib/GamePiece.js');
 
 describe('GamePiece', function() {
 
+  it('should instansiate a game piece', function() {
+    const gamepiece = new GamePiece();
+    expect(gamepiece).to.be.a('object')
+  })  
+
   it('should have properties', function() {
     const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0', 1)
-
     expect(gamePiece).to.equal(gamePiece, {
       x: 50,
       y: 50,
@@ -19,7 +23,6 @@ describe('GamePiece', function() {
 
   it('should have a function called draw', function() {
     const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0', 1)
-    
     expect(gamePiece.draw).to.be.a('function');
   });
 
