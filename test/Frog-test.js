@@ -19,13 +19,22 @@ describe('Frog', function() {
     const frog = new Frog();
     frog.x = 57
     frog.hopLeft();
-    expect(frog.x).to.equal(0);
+    expect(frog.x).to.equal(293);
   });
 
   it('should hop right', function() {
     const frog = new Frog();
     frog.x = 0
     frog.hopRight();
+
+    expect(frog.x).to.equal(407)
+  });
+
+  it('should hop up', function() {
+    const scoreAndLives = new ScoreAndLives;
+    const frog = new Frog();
+    frog.hopUp(scoreAndLives);
+    expect(frog.y).to.equal(630);
     expect(frog.x).to.equal(57)
   });
 
@@ -45,6 +54,12 @@ describe('Frog', function() {
 
   it('should be able to die', function() {
     const frog = new Frog();
+    const scoreAndLives = new ScoreAndLives;
+    frog.frogDies(scoreAndLives);
+
+    expect(scoreAndLives.lives).to.equal(2);
+    expect(frog.x).to.equal(350);
+    expect(frog.y).to.equal(680);
     expect(frog.frogDies).to.be.a('function')
   })
   
