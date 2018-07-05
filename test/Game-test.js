@@ -1,5 +1,8 @@
 const { expect } = require('chai');
 const Game = require('../lib/Game.js');
+const Frog = require('../lib/Frog.js');
+const Lives = require('../lib/Lives.js');
+const Water = require('../lib/Water.js');
 
 
 describe('Game',() => {
@@ -41,7 +44,14 @@ describe('Game',() => {
 
   it('should be able to draw frog trophies', function() {
     const game = new Game();
-    expect(game.drawFrogTrophies).to.be.a('function')
+    const frog = new Frog();
+    expect(game.drawFrogTrophies).to.be.a('function');
+    game.addWinArea();
+    frog.x = 23;
+    frog.y = 67;
+    // game.grassLanding();
+
+    expect(game.frogTrophies.length).to.equal(1);
   })
 
   it('should be able to draw logs', function() {
@@ -117,6 +127,20 @@ describe('Game',() => {
   it('should detect water collision', function() {
     const game = new Game();
     expect(game.waterCollision).to.be.a('function')
+  })
+
+  it('should kill the frog if frog lands in water', function() {
+    const frog = new Frog();
+    const game = new Game();
+    const lives = new Lives();
+    const water = new Water();
+    
+    expect(lives.life).to.equal(3)
+    frog.isCollidingWith(water);
+    frog.frogDies();
+
+    expect(lives.life).to.equal(2)
+
   })
 
   it('should detect landing on the grass area', function() {
