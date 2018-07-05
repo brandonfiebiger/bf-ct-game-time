@@ -4,6 +4,31 @@
   display: block;
 }
 
-body {
-  background-color: green
+@font-face {
+  font-family: 'Gaegu', cursive;
 }
+
+body {
+  background-color: rgb(13, 188, 121);
+  color: black;
+}
+
+h1 {
+  font-family: 'Gaegu';
+  text-align: center;
+}
+
+.left-section {
+  margin-left: 5em;
+  text-align: center;
+  float: left
+}
+
+.right-section {
+  margin-right: 5em;
+  text-align: center;
+  float: right
+}
+
+
+
